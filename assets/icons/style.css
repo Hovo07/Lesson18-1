@@ -27,6 +27,7 @@
 
 .icon-ruler:before {
   content: "\e904";
+  padding-right: 10px;
 }
 .icon-work:before {
   content: "\e902";

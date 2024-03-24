@@ -102,7 +102,7 @@ $col-dif: #009688;
           gap: 5px;
           padding-bottom: 16px;
           .port-list1 {
-            padding: 8px 12px;
+            padding: 10px 16px;
             background-color: $col1;
             @include fontStyle(15px, 400, $col);
             transition: 0.3s;
@@ -197,6 +197,153 @@ $col-dif: #009688;
       gap: 24px;
       .charge-sub {
         @include fontStyle(20px, 400, $col);
+      }
+    }
+    .contact {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      padding: 26px;
+      background-color: $col4;
+      .contact-sub {
+        @include fontStyle(20px, 600, $col);
+      }
+      .formm {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        .inp-p {
+          display: flex;
+          flex-direction: column;
+          .inp-txt {
+            @include fontStyle(15px, 400, $col);
+          }
+          .inputt {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+          }
+        }
+        .inp-btn {
+          padding: 10px 16px;
+          @include fontStyle(15px, 400, $col1);
+          border: none;
+          background-color: $col;
+          width: 150px;
+          cursor: pointer;
+          transition: 0.3s;
+          &:hover {
+            background-color: $col5;
+            color: $col;
+            transition: 0.3s;
+          }
+        }
+      }
+    }
+    .info {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(3, 33%);
+      grid-gap: 15px;
+      padding: 24px 32px;
+      background-color: $col3;
+      @media screen and (max-width: 600px) {
+        grid-template-columns: repeat(auto-fill, 100%);
+      }
+      .info-elm {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        .info-sub {
+          @include fontStyle(24px, 400, $col2);
+          text-align: left;
+        }
+        .info-txt {
+          @include fontStyle(15px, 400, $col2);
+          text-align: left;
+          line-height: 1.5;
+        }
+        .line1 {
+          margin: 0;
+        }
+        .info-img-p {
+          .info-img {
+            display: flex;
+            gap: 15px;
+            padding: 16px;
+            &:hover {
+              background-color: $col5;
+            }
+
+            .img {
+              height: 50px;
+              width: 50px;
+              cursor: pointer;
+              opacity: 0.8;
+              &:hover {
+                opacity: 1;
+              }
+            }
+            .i-txt {
+              display: flex;
+              flex-direction: column;
+              justify-content: space-around;
+              .info-sub1 {
+                @include fontStyle(24px, 400, $col1);
+                font-size: 20px;
+              }
+              .i-txt2 {
+                @include fontStyle(15px, 400, $col1);
+              }
+            }
+          }
+          .info-img:hover {
+            .info-sub1 {
+              color: $col1;
+            }
+            .i-txt2 {
+              color: $col1;
+            }
+          }
+        }
+        .tag-p {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 5px;
+          .tag {
+            padding: 0 8px;
+            font-size: 15px;
+            font-family: serif;
+            background-color: $col;
+            margin-bottom: 16px;
+            color: $col1;
+            text-align: center;
+            line-height: 1.2;
+          }
+          .tag1 {
+            @include fontStyle(12px, 400, $col);
+            padding: 0 8px;
+
+            background-color: $col4;
+            margin-bottom: 16px;
+
+            text-align: center;
+            line-height: 1.2;
+          }
+        }
+      }
+    }
+    .foot {
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $col;
+      .foot-txt {
+        @include fontStyle(15px, 400, $col1);
+        .foot-link {
+          @include fontStyle(15px, 400, $col1);
+        }
       }
     }
   }

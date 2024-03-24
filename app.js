@@ -209,12 +209,54 @@ for (let i = 1; i <= 3; i++) {
           m.innerText = "Unlimited Storage";
         }
       }
-      if(g === 5){
-        m.innerText = ''
+      if (g === 5) {
+        m.innerText = "Endless Support";
+        if (i === 1) {
+          m.innerText = "Mail Support";
+        }
       }
+    } else if (g === 6) {
+      s.style.height = "120px";
+      s.style.gap = "20px";
+      s.style.flexDirection = "column";
+
+      let e = document.createElement("p");
+
+      e.innerText = "$ 10";
+      if (i > 1) {
+        e.innerText = "$ 25";
+      }
+      e.style.fontFamily = '"Raleway", sans-serif';
+      e.style.fontSize = "30px";
+      e.style.color = "black";
+
+      m.innerText = "per month";
+      m.style.color = "#ddd";
+      m.style.fontSize = "15px";
+
+      s.appendChild(e);
+      s.appendChild(m);
+    } else if (g === 7) {
+      s.style.height = "95px";
+      s.style.background = "#f1f1f1";
+
+      let d = document.createElement("button");
+
+      d.innerText = "Sign up";
+      d.style.fontFamily = '"Raleway", sans-serif';
+      d.style.fontSize = "15px";
+      d.style.color = "white";
+      d.style.background = "#009688";
+      d.style.border = "none";
+      d.style.width = "100px";
+      d.style.height = "46px";
+
+      s.appendChild(d);
     }
 
     x.appendChild(s);
-    s.appendChild(m);
+    if (g >= 1 && g < 7) {
+      s.appendChild(m);
+    }
   }
 }
